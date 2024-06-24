@@ -14,11 +14,28 @@ const courses = [
 ];
 
 app.get("/", (req, res) => {
-  res.send("Hello World");
+  return res.send("Hello World");
 });
 
 app.get("/api/courses", (req, res) => {
   return res.send(courses);
+});
+
+app.get("/api/courses/:id", (req, res) => {
+  const course = courses.find((c) => c.id === parseInt(req.params.id));
+
+  if (!course) return res.status(404).send("No course found with the given ID");
+
+  return res.send(course);
+});
+
+// Request Param and Request Query
+app.get("/api/posts/:year/:month", (req, res) => {
+  const body = {
+    params: req.params,
+    queries: req.query,
+  };
+  return res.send(body);
 });
 
 app.post("/api/courses", (req, res) => {
@@ -31,7 +48,7 @@ app.post("/api/courses", (req, res) => {
   };
   courses.push(course);
 
-  res.send(course);
+  return res.send(course);
 });
 
 app.put('/api/courses/:id', (req , res) => {
@@ -47,25 +64,18 @@ app.put('/api/courses/:id', (req , res) => {
 
     // update record
   course.name = req.body.name
-  res.send(course)  
+  return res.send(course)  
 })
 
-app.get("/api/courses/:id", (req, res) => {
-  const course = courses.find((c) => c.id === parseInt(req.params.id));
-
-  if (!course) return res.status(404).send("No course found with the given ID");
-
-  res.send(course);
-});
-
-// Request Param and Request Query
-app.get("/api/posts/:year/:month", (req, res) => {
-  const body = {
-    params: req.params,
-    queries: req.query,
-  };
-  res.send(body);
-});
+app.delete('/api/courses/:id',(req , res) => {
+  // look up the course
+  const course = courses.find(c => c.id == parseInt(req.params.id));
+  if (!course) return res.status(404).send("the course is not available")
+  
+  let indexToDelete = courses.indexOf(course)
+  courses.splice(indexToDelete,1)
+  return res.status(200).send(courses)
+})
 
 // PORTS
 const port = process.env.PORT || 3000;
