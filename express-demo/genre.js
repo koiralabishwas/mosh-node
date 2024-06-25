@@ -13,17 +13,13 @@ const genres = [
   { id: 6, name: "hentai" },
 ];
 
-// did : get all the genre
-// did: create genre
-// TODO: update genre
-// TODO: delete genre
-// did : add shema
+
 
 // GET all genres
 server.get("/api/genres", (req, res) => {
   return res.send(genres);
 });
-
+// GET get the specifi genres
 server.get("/api/genres/:id" , (req , res) => {
   const genre = genres.find(g => g.id === parseInt(req.params.id))
   if(!genre)
