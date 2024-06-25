@@ -24,6 +24,13 @@ server.get("/api/genres", (req, res) => {
   return res.send(genres);
 });
 
+server.get("/api/genres/:id" , (req , res) => {
+  const genre = genres.find(g => g.id === parseInt(req.params.id))
+  if(!genre)
+    return res.status(404).send("no genre with id:" + req.params.id)
+  return res.status(200).send(genre)
+})
+
 // POST : create  a new genre
 server.post("/api/genres", (req , res) => {
 
@@ -33,6 +40,7 @@ server.post("/api/genres", (req , res) => {
   }
 
   const newGenre = {id : genres.length + 1 , name : req.body.name}
+
   genres.push(newGenre)
 
   return res.status(200).send(newGenre)
@@ -44,7 +52,7 @@ server.post("/api/genres", (req , res) => {
 server.put("/api/genres/:id" , (req , res) => {
   const genre = genres.find(genre => genre.id === parseInt(req.params.id))
   if (!genre)
-      return res.send("no genre found by id ")
+      return res.send("no genre found by id " + req.params.id)
 
   const {error , success} = validateBody(req.body)
   if (!success)  
@@ -72,7 +80,7 @@ server.delete("/api/genres/:id", (req , res) => {
 
 // configs
 const port = process.env.PORT || 3000;
-server.listen(port, () => console.log("listening to PORT==>" + port));
+server.listen(port, () => console.log("listening to PORT ==> " + port));
 
 const validateBody = (reqbody) => {
   const schema = z.object({
