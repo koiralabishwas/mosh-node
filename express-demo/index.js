@@ -1,9 +1,32 @@
-const express = require("express");
-const app = express();
 // Use PascalCase for class names
 const Joi = require("joi");
+const logger =  require('./logger')
+const express = require("express");
+const log = require("./logger");
+const auth = require('./auhenticator');
+const { urlencoded } = require("body-parser");
+// helmet for html headers
+const helmet = require('helmet')
+// morgan
+const morgan = require('morgan')
 
+
+const app = express();
+
+// express middlewares
 app.use(express.json());
+
+// send key=vaule&key=value on query stings i.e used in html forms smtime
+app.use(express.urlencoded())
+// to host static files
+app.use(express.static('static'))
+// app.use(logger)
+// app.use(auth)
+
+app.use(helmet())
+app.use(morgan('tiny'))
+
+
 
 const courses = [
   { id: 1, name: "course1" },
