@@ -1,3 +1,5 @@
+const debug = require('debug')('app:startup')
+const config = require('config')
 // Use PascalCase for class names
 const Joi = require("joi");
 const logger =  require('./logger')
@@ -13,18 +15,35 @@ const morgan = require('morgan')
 
 const app = express();
 
+// console.log("NODE_ENV : " , process.env.NODE_ENV)
+// // same code to get the current development envk
+// console.log("app  : " ,app.get("env"))
+
+
 // express middlewares
 app.use(express.json());
 
 // send key=vaule&key=value on query stings i.e used in html forms smtime
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended : true}))
 // to host static files
 app.use(express.static('static'))
 // app.use(logger)
 // app.use(auth)
 
 app.use(helmet())
-app.use(morgan('tiny'))
+
+// configurations by using config packages
+console.log("applicaton Name: " , config.get('name'))
+console.log("Mail Server: " , config.get('mail.host'))
+console.log("Mail Password:" , config.get('mail.password'))
+
+if (app.get('env') === "development") {
+  // enable morgan only in development
+  app.use(morgan('tiny'))
+  debug("morgan enabled.....")
+
+}
+
 
 
 
