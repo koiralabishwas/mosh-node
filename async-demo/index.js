@@ -1,45 +1,47 @@
-// asyncronous approach
-console.log("Before");
-getUser(1, getRepositories);
-console.log("After");
+console.log('Before');
+getUser(1, (user) => {
+  getRepositories(user.gitHubUsername, (repos) => {
+    getCommits(repos[0], (commits) => {
+      console.log(commits);
+    })
+  })
+});
 
-function getRepositories(user) {
-  getRepositories(user.gitHubUserName, getCommits);
+getUser(1)
+.then(usr => getRepositories(usr.gitHubUsername))
+.then(repo => getCommits(repo[0]))
+.then(commits => console.log(commits))
+.catch(err = console.log("Error" , err.message))
+
+
+
+console.log('After');
+
+function getUser(id) {
+  return new Promise((resolve , reject) => {
+    setTimeout(() => {
+      console.log('Reading a user from a database...');
+      resolve({ id: id, gitHubUsername: 'mosh' });
+    }, 2000);
+  })
+
 }
 
-function getCommits(repos) {
-  getCommits(repos, displayCommits);
+function getRepositories(username, ) {
+  return new Promise((resolve , reject) => {
+    setTimeout(() => {
+      console.log('Calling GitHub API...');
+      resolve(['repo1', 'repo2', 'repo3']);
+    }, 2000);
+  })
+  
 }
 
-function displayCommits(commits) {
-  console.log(commits);
-}
-
-// TO Deal with asyncronous programming
-// callbacks
-// Promises
-// async / await
-
-function getUser(id, callback) {
-  setTimeout(() => {
-    console.log("Reading a user from a database..... ");
-    callback({
-      id: id,
-      gitHubUserName: "Mosh",
-    });
-  }, 2000);
-}
-
-function getRepositories(userName, callback) {
-  setTimeout(() => {
-    console.log("Getting Repos");
-    callback(["repo1", "repo2", "repo3"]);
-  }, 2000);
-}
-
-function getCommits(repos, callback) {
-  setTimeout(() => {
-    console.log("Getting comments");
-    callback(["helo", "baby", "son o a b"]);
-  }, 2000);
+function getCommits(repo) {
+  return new Promise((resolve , reject) => {
+    setTimeout(() => {
+      console.log('Calling GitHub API...');
+      resolve(['commit']);
+    }, 2000);  
+  })
 }
