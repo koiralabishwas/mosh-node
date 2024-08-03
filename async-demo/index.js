@@ -1,17 +1,30 @@
 console.log('Before');
-getUser(1, (user) => {
-  getRepositories(user.gitHubUsername, (repos) => {
-    getCommits(repos[0], (commits) => {
-      console.log(commits);
-    })
-  })
-});
+// getUser(1, (user) => {
+//   getRepositories(user.gitHubUsername, (repos) => {
+//     getCommits(repos[0], (commits) => {
+//       console.log(commits);
+//     })
+//   })
+// });
 
-getUser(1)
-.then(usr => getRepositories(usr.gitHubUsername))
-.then(repo => getCommits(repo[0]))
-.then(commits => console.log(commits))
-.catch(err => console.log("Error" , err))
+// getUser(1)
+// .then(usr => getRepositories(usr.gitHubUsername))
+// .then(repo => getCommits(repo[0]))
+// .then(commits => console.log(commits))
+// .catch(err => console.log("Error" , err))
+
+// async and await approach
+
+async function displayCommits() {
+  try{const user = await getUser(1)
+  const repos = await getRepositories(user.gitHubUsername);
+  const commits = await getCommits(repos[0])
+  console.log(commits)
+} catch (err) {
+  console.log("Error" , err.message)
+}
+}
+displayCommits(1)
 
 
 
@@ -41,7 +54,7 @@ function getCommits(repo) {
   return new Promise((resolve , reject) => {
     setTimeout(() => {
       console.log('Calling GitHub API...');
-      resolve(['commit']);
+      reject(new Error("SMt failed while getting comments"));
     }, 2000);  
   })
 }
