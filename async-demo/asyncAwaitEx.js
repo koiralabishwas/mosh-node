@@ -25,12 +25,8 @@ async function promotion() {
   } catch(err) {
     console.log("Error=>" ,err.message)
   }
-  
 }
 promotion()
-
-
-
 
 // function getCustomer(id, callback) {
 //   setTimeout(() => {
@@ -50,7 +46,7 @@ function getCustomer(id) {
       resolve({
         id : id,
         name : "Mosh Hamedani" ,
-        // isGold : true,
+        isGold : true,
         email : "mosh@gmail.com"
       })
     },4000)
