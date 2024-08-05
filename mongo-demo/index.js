@@ -40,13 +40,36 @@ async function getCourses() {
   // lte => less than or equal to
   // in
   // nin => not in
+  // .find()
+  // .or([{author : "Mosh"},{isPublishes : true}])
+  // .and([{} , ])
+  
+    // .find({author : "Mosh" , isPublishes : true})
+    // starts with smt
+    // .find({author : /^Mosh/})
+    // ends with smt
+    // .find({author : /Hamedani$/})
+    // contains smt
+    // .find({author : /.*Mosh.*/i}) // i for disable case sensitive
+    // .limit(10)
+    // .sort({name : 1})
+    // .select({name : 1 , tags : 1})
+    // .countDocuments() // to just count how many results
+
+  const pageNumber = 2
+  const pageSize = 10
+  //api/index/?pageNumber=2&pageSize=10
+
   const courses = await Course
-    // .find({price : {$gte : 10 , $lte : 20}})
-    .find({price  : {$in : [10 , 15 , 20]}})
-    .limit(10)
-    .sort({ name: "asc" })
-    .select({ name: 1, tags: 1 });
-  console.log(courses);
+    .find({author : "Mosh" , isPublishes : true})
+    .skip((pageNumber -1) * pageSize) // as page number might start from 1 
+    .limit(pageSize)
+    .sort({name : 1})
+    .select({name : 1 , tags : 1})
+
+  
+  console.log(courses)
+
 }
 // createCourse()
 getCourses();
