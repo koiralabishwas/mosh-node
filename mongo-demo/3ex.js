@@ -22,7 +22,7 @@ const Course = mongoose.model("Courses" , courseSchema)
 async function getCourses() {
   return await Course
     .find({isPublished : true})
-    .or([{price : {$gte : 15}} , {name : /.*by*./i}])
+    .or([{price : {$gte : 15}} , {name : /.*by*./i}]) // i here means case insensitive
     // .sort("-price")
     // .select('name author price')
     

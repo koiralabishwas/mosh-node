@@ -70,6 +70,40 @@ async function getCourses() {
   
   console.log(courses)
 
+
 }
 // createCourse()
-getCourses();
+// getCourses();
+
+async function updateCourse(id) {
+
+  // // query first approach
+  // // find by id => modify it's properties => save
+  // const course = await Course.findById(id)
+  // if (!course) 
+  //   return
+  // course.isPublishes = true;
+  // course.author = "Another Author"
+  
+  // const result = await course.save()
+  // console.log(result)
+
+
+  // update first approach
+  // update directly and get the updated document 
+  const course = await Course.update({_id : id} , {
+    
+  })
+  if (!course) 
+    return
+  course.isPublishes = true;
+  course.author = "Another Author"
+  
+  const result = await course.save()
+  console.log(result)
+
+  
+}
+
+updateCourse("66ae5a13e0c378ad646a96f8")
+
