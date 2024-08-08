@@ -91,19 +91,20 @@ async function updateCourse(id) {
 
   // update first approach
   // update directly and get the updated document 
-  const course = await Course.update({_id : id} , {
-    
-  })
-  if (!course) 
-    return
-  course.isPublishes = true;
-  course.author = "Another Author"
-  
-  const result = await course.save()
-  console.log(result)
-
-  
+//  const result = await Course.updateMany({_id : id} , {
+  const course = await Course.findByIdAndUpdate(id , {
+    $set : {
+      author : "fuck me daddy",
+      isPublished : "False"
+    }
+  } , {new : true})
+  console.log(course)
 }
 
-updateCourse("66ae5a13e0c378ad646a96f8")
 
+async function removeCourse(id) {
+  const result = await Course.deleteOne( {_id : id})
+  console.log(result )
+}
+
+removeCourse("66ae5a13e0c378ad646a96f8")
