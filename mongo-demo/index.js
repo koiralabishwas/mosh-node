@@ -11,11 +11,46 @@ mongoose
 // define schema to
 
 const courseSchema = new mongoose.Schema({
-  name: String,
+  name: {
+    type : String ,
+    required : true,
+    minlength : 5,
+    maxlength : 226,
+  },
+  category : {
+    type : String,
+    enum : ["web" , "mobile" , "network"],
+    lowercase : true, // automatically converts to lower case 
+    // uppercase : true,
+    trim : true // removes spaces automatically
+  },
   author: String,
-  tags: [String],
+  tags: {
+    type: Array,
+    validate: {
+      isAsync: true,
+      validator: function (v) {
+        return new Promise((resolve) => {
+          setTimeout(() => {
+            const result = v && v.length > 0;
+            resolve(result);
+          }, 4000);
+        });
+      },
+      message: "At least 1 tag is required.",
+    },
+  },
   date: { type: Date, default: Date.now },
   isPublishes: Boolean,
+  price : {
+    type : Number ,
+    // logic => required when it isPublihes is true(arrfunc doest support this.method so use regular func)
+    required :function () {return this.isPublishes},
+    min : 10,
+    max : 200,
+    get : v => Math.round(v), // value is rounder when HTTP GET
+    set : v => Math.round(v) // value is rounded when HTTP POST
+  }
 });
 
 const Course = mongoose.model("Course", courseSchema);
@@ -24,12 +59,25 @@ async function createCourse() {
   const course = new Course({
     name: "Angular course",
     author: "Mosh",
-    tags: ["angular", "frontend"],
-    isPublishes: true,
+    category : "Web",
+    tags : ["frontend"],
+    isPublishes: true, 
+    price : 10.6
   });
-  const result = await course.save();
-  console.log(result);
+
+  try {
+    const result = await course.save()
+    console.log(result)
+  } catch (ex) {
+    console.log(ex.errors)
+    //to find errors from each properties
+    // for (field in ex.errors)
+    //   console.log(ex.errors[field].message)
+  }
 }
+
+// createCourse()
+
 async function getCourses() {
     // mongo db queries
   // eq => equal
@@ -61,19 +109,18 @@ async function getCourses() {
   //api/index/?pageNumber=2&pageSize=10
 
   const courses = await Course
-    .find({author : "Mosh" , isPublishes : true})
-    .skip((pageNumber -1) * pageSize) // as page number might start from 1 
-    .limit(pageSize)
+    .find({_id : "66b6ea4dddb3eec598241545"})
+    // .skip((pageNumber -1) * pageSize) // as page number might start from 1 
+    // .limit(pageSize)
     .sort({name : 1})
-    .select({name : 1 , tags : 1})
+    .select({name : 1 , price : 1})
 
   
-  console.log(courses)
+  console.log(courses[0].price)
 
 
 }
-// createCourse()
-// getCourses();
+getCourses();
 
 async function updateCourse(id) {
 
@@ -106,5 +153,3 @@ async function removeCourse(id) {
   const result = await Course.deleteOne( {_id : id})
   console.log(result )
 }
-
-removeCourse("66ae5a13e0c378ad646a96f8")
