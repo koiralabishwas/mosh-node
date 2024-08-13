@@ -1,6 +1,6 @@
-const mongoose = require('mongoose')
 const express = require('express');
 const router = express.Router();
+const {Genre} = require("../modules/genre")
  
 // const genres = [
 //   { id: 1, name: 'Action' },  
@@ -8,10 +8,6 @@ const router = express.Router();
 //   { id: 3, name: 'Romance' },  
 // ];
 
-const Genre = mongoose.model("Genre" , new mongoose.Schema({
-  name : {type : String , required : true , minlength : 5 , maxlength : 50},
-})
-)
 
 // get 
  router.get('/', async (req, res) => {
