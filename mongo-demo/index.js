@@ -48,7 +48,7 @@ const courseSchema = new mongoose.Schema({
     required :function () {return this.isPublishes},
     min : 10,
     max : 200,
-    get : v => Math.round(v), // value is rounder when HTTP GET
+    get : v => Math.round(v), // value is rounded when HTTP GET
     set : v => Math.round(v) // value is rounded when HTTP POST
   }
 });
@@ -86,7 +86,7 @@ async function getCourses() {
   // gte => greater than or equal to
   // lt => less than
   // lte => less than or equal to
-  // in
+  // inu
   // nin => not in
   // .find()
   // .or([{author : "Mosh"},{isPublishes : true}])
