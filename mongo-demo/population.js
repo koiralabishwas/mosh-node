@@ -14,7 +14,7 @@ const Course = mongoose.model('Course', new mongoose.Schema({
   name: String,
   author : {
     type : mongoose.Schema.Types.ObjectId,
-    ref : "Author",
+    ref : "Author", // 仮に変なauthor id も入れられる。そしたら author : null になる。
   }
 }));
 
@@ -42,7 +42,7 @@ async function createCourse(name, author) {
 async function listCourses() { 
   const courses = await Course
     .find()
-    .populate('author', "name -_id")
+    .populate('author', "name -_id") // excludes id 
     .select('name author');
   console.log(courses);
 }
@@ -51,4 +51,4 @@ async function listCourses() {
 
 // createCourse('Node Course', '66c46f9c957bff008319f631')
 
-listCourses()
+// listCourses()
