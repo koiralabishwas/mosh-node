@@ -70,7 +70,7 @@ async function addAuthor(courseId , author) {
 async function removeAuthor(courseId , authorId) {
   const course = await Course.findById(courseId)
   const author = course.authors.id(authorId);
-  author.remove();
+  author.deleteOne();
   course.save();
   
 }
@@ -79,6 +79,6 @@ async function removeAuthor(courseId , authorId) {
 //   new Author({name : "Ice Cube"})
 // )
 
-removeAuthor('67b2d079db12f47d93bbe42e' , '67b2d079db12f47d93bbe42d')
+removeAuthor('67b2d079db12f47d93bbe42e' , '67b2d079db12f47d93bbe42c')
 
 // updateAutor("67b2a55b5585bb94ba8b83fd")
