@@ -1,3 +1,4 @@
+const config = require('config')
 const jwt = require('jsonwebtoken')
 const _ = require('lodash')
 const bcrypt = require('bcrypt')
@@ -18,14 +19,14 @@ router.post('/', async (req,res) => {
   const user = await User.findOne({email : req.body.email})
   if (!user) return res.status(400).send('Invalid user or password')
   
-  const validPassword = await bcrypt.compare(req.body.password, await user.password)
+  const validPassword = await bcrypt.compare(req.body.password, user.password)
 
   if (!validPassword) {
-    res.status(401).send("Invalid password")
+    return res.status(401).send("Invalid password")
   }
 
-  const token = jwt.sign({_id : user._id , name : user.name} , 'privatekey')
-  res.status(200).send(token)
+  const token = jwt.sign({_id : user._id , name : user.name} , config.get('jwtPrivateKey'))
+  return res.status(200).send(token)
   
 })
 
