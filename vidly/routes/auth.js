@@ -25,7 +25,7 @@ router.post('/', async (req,res) => {
     return res.status(401).send("Invalid password")
   }
 
-  const token = jwt.sign({_id : user._id , name : user.name} , config.get('jwtPrivateKey'))
+  const token = user.generateAuthToken()
   return res.status(200).send(token)
   
 })
