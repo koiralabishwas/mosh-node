@@ -1,3 +1,4 @@
+const jwt = require('jsonwebtoken')
 const _ = require('lodash')
 const bcrypt = require('bcrypt')
 const {User} = require('../models/user')
@@ -23,8 +24,9 @@ router.post('/', async (req,res) => {
     res.status(401).send("Invalid password")
   }
 
-  res.send(true)
-
+  const token = jwt.sign({_id : user._id , name : user.name} , 'privatekey')
+  res.status(200).send(token)
+  
 })
 
 function validate(req) {
