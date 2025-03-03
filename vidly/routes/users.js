@@ -12,6 +12,15 @@ router.get('/',async (req , res) => {
   res.send('hello world')
 })
 
+router.get('/me', auth ,async (req , res) => {
+  // const user = await User.findById(req.user._id).select('-password')
+
+  /**
+   * NOTE : if name is set in auth jwt , you can get that withoute over fetching
+   */
+  res.send(await req.user.name)
+})
+
 router.post('/',async (req,res) => {
   const {error} = validate(req.body);
   if (error) return res.status(400).send(error.details[0].message)

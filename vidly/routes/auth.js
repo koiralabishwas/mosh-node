@@ -7,7 +7,10 @@ const mongoose = require('mongoose')
 const express = require('express')
 const Joi = require('joi')
 const router = express.Router()
-
+/**
+ * No need to implement logout in server
+ * simply remove jwt on the client
+ */
 router.get('/', async (req , res) => {
   res.send('hello world')
 })
