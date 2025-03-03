@@ -9,6 +9,7 @@ const rentals = require('./routes/rentals');
 const users = require('./routes/users')
 const auth = require('./routes/auth')
 const express = require('express');
+const error = require('./middleware/error');
 const app = express();
 
 if (!config.get('jwtPrivateKey')){
@@ -27,6 +28,9 @@ app.use('/api/movies', movies);
 app.use('/api/rentals', rentals);
 app.use('/api/users', users);
 app.use('/api/auth', auth);
+
+//NOTE: we can use error handling route in express at the end of route
+app.use(error)
 
 const port = 3000;
 app.listen(port, () => console.log(`Listening on port ${port}...`));
