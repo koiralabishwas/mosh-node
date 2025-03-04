@@ -12,6 +12,7 @@ const express = require('express');
 const error = require('./middleware/error');
 const app = express();
 
+
 if (!config.get('jwtPrivateKey')){
   console.error('FATAL ERROR : JWT Private Key is not defined ')
   process.exit(1)
