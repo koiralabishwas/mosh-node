@@ -3,7 +3,6 @@ module.exports = function asyncMiddleware(handler){
     try {
       await handler(req,res)
     } catch (ex) {
-      ex.fuckingUnexpecXXXXX = "XXXXXXXXXXXXXXXXXXXX"
       next(ex)
     }
   }
