@@ -7,5 +7,5 @@ module.exports = function (err, req, res, next) {
   //verbose
   //debug => writing debugging information
   //silly
-  res.status(500).send("something failed");
+  res.status(500).send(err);
 };
