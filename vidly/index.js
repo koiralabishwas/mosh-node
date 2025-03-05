@@ -5,15 +5,10 @@ const config = require('config')
 const Joi = require('joi')
 Joi.objectId = require('joi-objectid')(Joi)
 const mongoose = require('mongoose');
-const genres = require('./routes/genres');
-const customers = require('./routes/customers');
-const movies = require('./routes/movies');
-const rentals = require('./routes/rentals');
-const users = require('./routes/users')
-const auth = require('./routes/auth')
-const express = require('express');
-const error = require('./middleware/error');
+
 const app = express();
+
+require('./startup/routes')(app)
 
 // // only works in syncronous code
 // process.on('uncaughtException' , (ex)=> {
@@ -52,13 +47,7 @@ winston.add(new winston.transports.MongoDB({db : 'mongodb://localhost/vidly' , l
 // throw new Error('here, error wont get caught by default winston,use process.on("uncaughtException") ')
 
 
-app.use(express.json());
-app.use('/api/genres', genres);
-app.use('/api/customers', customers);
-app.use('/api/movies', movies);
-app.use('/api/rentals', rentals);
-app.use('/api/users', users);
-app.use('/api/auth', auth);
+
 
 //NOTE: we can use error handling route in express at the end of route
 app.use(error)
