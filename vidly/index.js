@@ -1,5 +1,6 @@
 require('express-async-errors')
 const winston = require('winston')
+require("winston-mongodb")
 const config = require('config')
 const Joi = require('joi')
 Joi.objectId = require('joi-objectid')(Joi)
@@ -14,6 +15,11 @@ const express = require('express');
 const error = require('./middleware/error');
 const app = express();
 
+process.on('uncaughtException' , (ex)=> {
+  console.log('got an uncaught exception')
+  winston.error(ex.message , ex)
+})
+
 if (!config.get('jwtPrivateKey')){
   console.error('FATAL ERROR : JWT Private Key is not defined ')
   process.exit(1)
@@ -23,7 +29,16 @@ mongoose.connect('mongodb://localhost/vidly')
 .then(() => console.log('Connected to MongoDB...'))
 .catch(err => console.error('Could not connect to MongoDB...'));
 
+
+
 winston.add(new winston.transports.File({filename : 'log.log'})) 
+winston.add(new winston.transports.MongoDB({db : 'mongodb://localhost/vidly' , level:'info'}))
+
+// NOTE : need to use process.on('uncaughtException)
+
+throw new Error('here, error wont get caught by default winston,use process.on("uncaughtException") ')
+
+
 app.use(express.json());
 app.use('/api/genres', genres);
 app.use('/api/customers', customers);
