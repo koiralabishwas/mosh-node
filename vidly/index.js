@@ -1,4 +1,5 @@
 require('express-async-errors')
+const winston = require('winston')
 const config = require('config')
 const Joi = require('joi')
 Joi.objectId = require('joi-objectid')(Joi)
@@ -13,16 +14,16 @@ const express = require('express');
 const error = require('./middleware/error');
 const app = express();
 
-
 if (!config.get('jwtPrivateKey')){
   console.error('FATAL ERROR : JWT Private Key is not defined ')
   process.exit(1)
 }
 
 mongoose.connect('mongodb://localhost/vidly')
-  .then(() => console.log('Connected to MongoDB...'))
-  .catch(err => console.error('Could not connect to MongoDB...'));
+.then(() => console.log('Connected to MongoDB...'))
+.catch(err => console.error('Could not connect to MongoDB...'));
 
+winston.add(new winston.transports.File({filename : 'log.log'})) 
 app.use(express.json());
 app.use('/api/genres', genres);
 app.use('/api/customers', customers);
