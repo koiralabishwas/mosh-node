@@ -1,5 +1,5 @@
 const lib = require('../lib')
-
+const db = require('../db')
 //NOTE : tobe means excat same in memmory when it comes to object and arrays so use toEqual
 
 
@@ -62,3 +62,16 @@ describe('registerUser' , () => {
     expect(result.id).toBeGreaterThan(0)
   })
 }) 
+
+describe('applyDiscount' , () => {
+  it('should apply 10% discount if customer has more than 10 points', () => {
+    db.getCustomerSync = function (cutomerId) {
+      return {id : cutomerId ,points : 20}
+      console.log('fake reading customer ')
+    }
+
+    const order = {cutomerId : 1 , totalPrice : 10 }
+    lib.applyDiscount(order)
+    expect(order.totalPrice).toBe(9)
+  })
+})
