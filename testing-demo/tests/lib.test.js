@@ -1,5 +1,6 @@
 const lib = require('../lib')
 const db = require('../db')
+const mail = require('../mail')
 //NOTE : tobe means excat same in memmory when it comes to object and arrays so use toEqual
 
 
@@ -65,13 +66,29 @@ describe('registerUser' , () => {
 
 describe('applyDiscount' , () => {
   it('should apply 10% discount if customer has more than 10 points', () => {
-    db.getCustomerSync = function (cutomerId) {
-      return {id : cutomerId ,points : 20}
+    db.getCustomerSync = function (customerId) {
+      return {id : customerId ,points : 20}
       console.log('fake reading customer ')
     }
 
     const order = {cutomerId : 1 , totalPrice : 10 }
     lib.applyDiscount(order)
     expect(order.totalPrice).toBe(9)
+  })
+})
+
+describe('notifyCustomer', () => {
+  it('should send an email to customer',() => {
+    db.getCustomerSync = function(customerId) {
+      return {email : 'a'}
+    }
+
+    let mailSent = false
+    mail.send = function(email, message) {
+      console.log('Mock Sending an email...');
+      mailSent = true
+    }
+    lib.notifyCustomer({customerId : 1})
+    expect(mailSent).toBe(true)
   })
 })
