@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema({
   }
 })
 
+//TODO : create unit test of this function 
 userSchema.methods.generateAuthToken = function () {
   const token = jwt.sign({_id : this._id , name : this.name , isAdmin : this.isAdmin} , config.get('jwtPrivateKey'))
   return token 
