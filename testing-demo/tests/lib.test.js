@@ -25,4 +25,12 @@ describe('greet' , ()=> {
     expect(result).toMatch(/Bishwas/) // this is good as long as it contains Bishwas
     expect(result).toContain("Bishwas") // this is good as long as it contains Bishwas
   })
-} )
+})
+
+describe('getCurrencies' , () => {
+  it('should return supported currencies' , () => {
+    const result = lib.getCurrencies()
+
+    expect(result).toEqual(expect.arrayContaining(['EUR','AUD','USD','NP','JP']))
+  })
+})
