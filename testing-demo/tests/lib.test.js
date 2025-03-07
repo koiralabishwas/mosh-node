@@ -17,3 +17,12 @@ describe('absoloute', () => {
     expect(result).toBe(0)
   })
 }) 
+
+describe('greet' , ()=> {
+  it('should return the greeting message',()=> {
+    const result = lib.greet("Bishwas")
+    // expect(result).toBe('Welcome Bishwas') // this is bad . too specifiv
+    expect(result).toMatch(/Bishwas/) // this is good as long as it contains Bishwas
+    expect(result).toContain("Bishwas") // this is good as long as it contains Bishwas
+  })
+} )
