@@ -1,5 +1,7 @@
 const lib = require('../lib')
 
+//NOTE : tobe means excat same in memmory when it comes to object and arrays so use toEqual
+
 
 describe('absoloute', () => {
   it('absolute - should return positive if input is positive', () => { 
@@ -32,5 +34,15 @@ describe('getCurrencies' , () => {
     const result = lib.getCurrencies()
 
     expect(result).toEqual(expect.arrayContaining(['EUR','AUD','USD','NP','JP']))
+  })
+})
+
+describe('getProduct',() => {
+  it('should return product id and price' , () => {
+    const result = lib.getProduct(1)
+    
+    // expect(result).toEqual({id : 1 ,price : 10}) // needs to be exact same object
+    expect(result).toMatchObject({id : 1 , price : 10}) // just need to contain these properties
+    expect(result).toHaveProperty('id',1) // good if it has only this property
   })
 })
