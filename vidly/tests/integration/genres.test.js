@@ -48,31 +48,42 @@ describe("/api/genres", () => {
   });
 
   describe("POST /",() => {
-    it('should return 401 if not logged in ',async () => {
-      const res = await request(server)
+    let token;
+    let name;
+    async function exec(){
+      return await request(server)
       .post('/api/genres')
-      .send({name : "genre1"})
+      .set('x-auth-token',token)
+      .send({name : name})
+    }
 
+    beforeEach( () => {
+      token = new User().generateAuthToken();
+      name = 'genre1'
+    })
+    it('should return 401 if not logged in ',async () => {
+      token = ''
+      const res = await exec()
       expect(res.status).toBe(401)
     })
 
     it('should return 400 if genre is invalid i.e less than 5 char ',async () => {
-      const token = new User().generateAuthToken()
-      const name = new Array(52).join('a')
-      const res = await request(server)
-      .post('/api/genres')
-      .set('x-auth-token' , token)
-      .send({name : name})
+      name = new Array(2).join('a')
+      const res = await exec()
+
+      expect(res.status).toBe(400)
+    })
+
+    it('should return 400 if genre is invalid i.e more than 50 char ',async () => {
+      name = new Array(52).join('a')
+      const res = await exec()
 
       expect(res.status).toBe(400)
     })
 
     it('should return save the genre if it is valid ',async () => {
       const token = new User().generateAuthToken()
-      const res = await request(server)
-      .post('/api/genres')
-      .set('x-auth-token' , token)
-      .send({name : "genre1"})
+      const res = await exec()
       expect(res.status).toBe(200)
       const genre = Genre.find({name : 'genre1'})
       expect(genre).not.toBeNull()
@@ -80,11 +91,7 @@ describe("/api/genres", () => {
 
     it('should return the genre if it is valid',async () => {
       const token = new User().generateAuthToken()
-      const res = await request(server)
-      .post('/api/genres')
-      .set('x-auth-token',token)
-      .send({name : 'genre1'})
-
+      const res = await exec()
       expect(res.body).toHaveProperty('_id') 
       expect(res.body).toHaveProperty('name','genre1') 
     })
