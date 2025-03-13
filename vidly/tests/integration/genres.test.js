@@ -33,7 +33,7 @@ describe("/api/genres", () => {
   });
   describe("GET /:ID", () => {
     it("should return genre specific genre by id", async () => {
-      const genre = await new Genre({ name: "genrez" }).save();
+      const genre = await new Genre({ name: "genre1" }).save();
       const res = await request(server).get(`/api/genres/${genre._id}`);
       expect(res.status).toBe(200);
       expect(res.body).toHaveProperty("name", genre.name);
