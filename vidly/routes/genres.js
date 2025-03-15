@@ -23,8 +23,8 @@ router.post('/', auth , async (req, res) => {
   res.send(genre);
 });
 
-router.put('/:id', async (req, res) => {
-  const { error } = validapte(req.body); 
+router.put('/:id',auth,async (req, res) => {
+  const { error } = validate(req.body); 
   if (error) return res.status(400).send(error.details[0].message);
 
   const genre = await Genre.findByIdAndUpdate(req.params.id, { name: req.body.name }, {

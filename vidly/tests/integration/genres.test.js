@@ -96,4 +96,87 @@ describe("/api/genres", () => {
       expect(res.body).toHaveProperty('name','genre1') 
     })
   })
+
+  describe("PUT/:ID", () => {
+    let token ;
+    let _id;
+    async function exec(id , newName){
+      return await request(server)
+      .put('/api/genres/'+id)
+      .set('x-auth-token',token)
+      .send({name : newName})
+    }
+    beforeEach(async () => {
+      token = new User().generateAuthToken();
+      const initialGenre = await new Genre({name : 'oldName'}).save()
+      _id = initialGenre._id
+    })
+    it('should return error if invalid jwt',async () => {
+      token = "";
+      const res = await exec(_id , 'newName')
+      expect(res.status).toBe(401);
+    })
+
+    it('should return error if genreId is notGiven' , async () => {
+      _id = ''
+      const res = await exec(_id , 'newName')
+      expect(res.status).toBe(404)
+    })
+
+    it('should return error if genreId is not found' , async () => {
+      _id = new mongoose.Types.ObjectId().toHexString()
+      const res = await exec(_id , 'newName')
+      expect(res.status).toBe(404)
+    })
+    it('should change the name if it is valid ',async() => {
+      const name = 'newName'
+      const res = await exec(_id , name)
+      expect(res.status).toBe(200);
+      expect(res.body.name).toBe('newName')
+    })
+  })
+
+  describe('DELETE/:ID' , () => {
+    let token ;
+    let _id;
+    async function exec(id){
+      return await request(server)
+      .delete('/api/genres/'+id)
+      .set('x-auth-token',token)
+      .send()
+    }
+
+    beforeEach(async () => {
+      const initialGenre = await new Genre({name : 'oldName'}).save()
+      const initialUser = new User({
+        name: "test user",
+        email: "example@gmail.com",
+        password: "123456",
+        isAdmin: true
+      })
+      token = initialUser.generateAuthToken();
+      genreId = initialGenre._id
+    })
+    it('should return error if not authorized',async () => {
+      token = "";
+      const res = await exec(genreId , 'newName')
+      expect(res.status).toBe(401);
+    })
+
+    it('should return error if genreId is notGiven' , async () => {
+      genreId = ''
+      const res = await exec(genreId , 'newName')
+      expect(res.status).toBe(404)
+    })
+
+    it('should return error if genreId is not found' , async () => {
+      genreId = new mongoose.Types.ObjectId().toHexString()
+      const res = await exec(genreId , 'newName')
+      expect(res.status).toBe(404)
+    })
+    it('should delete it is valid ',async() => {
+      const res = await exec(genreId)
+      expect(res.status).toBe(200);
+    })
+  })
 });
