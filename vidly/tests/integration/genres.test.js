@@ -28,7 +28,6 @@ describe("/api/genres", () => {
       expect(res.body.some((g) => g.name === "genre2")).toBeTruthy();
       expect(res.body.some((g) => g.name === "genre3")).toBeTruthy();
       expect(res.body.some((g) => g.name === "genre9")).toBeFalsy(); // Check genre9 is NOT present
-      console.log(res.body);
     });
   });
   describe("GET /:ID", () => {

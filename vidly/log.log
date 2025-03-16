@@ -2557,3 +2557,149 @@
 {"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
 {"level":"info","message":"Listening on port 3000..."}
 {"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"moment is not defined moment is not defined","stack":"ReferenceError: moment is not defined\n    at moment (/home/wasub/dev/mosh-node/vidly/routes/returns.js:17:22)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
