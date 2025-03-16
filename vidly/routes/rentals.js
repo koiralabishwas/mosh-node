@@ -14,8 +14,8 @@ router.get('/' ,auth , async (req , res) => {
 
 
 router.post('/' ,auth, async(req , res) => {
-  // const {error} = validateRental(req.body)
-  // if (error) return res.status(400).send(error)
+  const {error} = validateRental(req.body)
+  if (error) return res.status(400).send(error)
 
 
   const customer = await Customer.findById(req.body.customerId)
