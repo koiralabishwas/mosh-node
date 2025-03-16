@@ -7,6 +7,7 @@ describe('auth middleware',() => {
   afterEach(async () => {
     await Genre.deleteMany({});
     server.close(); 
+    token = new User().generateAuthToken()
   })
   let token;
   const exec = async () => {
@@ -14,9 +15,6 @@ describe('auth middleware',() => {
     .set('x-auth-token' , token)
     .send({name : 'genre1'})
   }
-  beforeEach(() => {
-    token = new User().generateAuthToken()
-  })
   
   it('should return 401 if no token in provided',async () => {
     token = ''
