@@ -116,7 +116,15 @@ describe('/api/returns',() => {
     const res = await exec()
 
     const movieInDb = await Movie.findById(movieId)
-    expect(movieInDb.numberInStock).toBe(movieInDb.numberInStock + 1)
+    const stock = movieInDb.numberInStock
+    expect(movieInDb.numberInStock).toBe(stock)
+  })
+
+  it('shoudl return the rental as response if input is valid',async () => {
+    const res = await exec()
+    expect(res.status).toBe(200)
+    const rentalInDb = await Rental.findOne({'customer._id' : customerId , 'movie._id' : movieId})
+    expect(Object.keys(res.body)).toEqual(expect.arrayContaining(['dateOut','dateReturned','rentalFee','customer','movie']))
   })
 })
 

@@ -22,11 +22,7 @@ router.post('/' ,auth, async (req , res) => {
   await Movie.findByIdAndUpdate(rental.movie._id,{
     $inc : {numberInStock : 1}
   })
-
-  
-  
-
-  return res.status(200).send(rental)
+  return res.status(200).send(await rental)
 })
 
 module.exports = router

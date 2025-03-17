@@ -2763,3 +2763,203 @@
 {"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
 {"level":"info","message":"Listening on port 3000..."}
 {"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"error","message":"res.status(...).body is not a function res.status(...).body is not a function","stack":"TypeError: res.status(...).body is not a function\n    at body (/home/wasub/dev/mosh-node/vidly/routes/returns.js:29:26)\n    at processTicksAndRejections (node:internal/process/task_queues:95:5)"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
+{"level":"info","message":"Listening on port 3000..."}
+{"level":"info","message":"Connected to MongoDB...mongodb://localhost/vidly_test"}
