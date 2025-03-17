@@ -19,6 +19,13 @@ router.post('/' ,auth, async (req , res) => {
   rental.rentalFee =  rentalDays * rental.movie.dailyRentalRate
   await rental.save()
 
+  await Movie.findByIdAndUpdate(rental.movie._id,{
+    $inc : {numberInStock : 1}
+  })
+
+  
+  
+
   return res.status(200).send(rental)
 })
 
